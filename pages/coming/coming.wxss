@@ -1,0 +1,23 @@
+/* pages/coming/coming.wxss */
+.page-item{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid rgba(7,17,27,0.1);
+}
+.page-item:last-child{
+  border-bottom: 0px;
+}
+.page-left {
+  font-size: 0;
+  flex: 0 0 240rpx;
+  width: 240rpx;
+  margin-right: 20rpx;
+  height: 100%;
+}
+.page-left image{
+  width: 100%;
+  height:330rpx;
+}
+.page-right {
+   flex: 1;
+}

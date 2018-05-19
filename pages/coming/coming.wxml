@@ -1,0 +1,49 @@
+<!--pages/coming/coming.wxml-->
+<block wx:if="{{allCount === 0}}">
+  <view>
+    <text class="no-list">暂无数据</text>
+  </view>
+</block>
+<block wx:else>
+  <scroll-view class='page-wrapper' scroll-y>
+    <view class='page-item' wx:for="{{coming}}" wx:for-item="movie" wx:key="index">
+      <view class='page-left'>
+        <image src="{{movie.images.small}}" lazy-load></image>
+      </view>
+      <view class='page-rigth'>
+        <view class='page-info-title'>
+          <text class='title'>{{movie.title + '(' + movie.original_title + ')'}}</text>
+          <text class='time'>上映年份：</text>
+          <text class='time'>{{movie.year}}</text>
+        </view>
+        <view class='rate'>
+          <text>评分：</text>
+          <text>{{movie.rating.average}}</text>
+        </view>
+        <view class='rate'>
+          <text>导演：</text>
+          <text>{{movie.directors[0].name}}</text>
+        </view>
+        <view class='rate'>
+          <text>主演：</text>
+          <block wx:for="{{movie.casts}}" wx:for-item="casts" wx:key="casts_index">
+            <text>{{casts.name}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- loading -->
+    <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <!-- no -->
+    <view class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
+    <!-- load-more -->
+    <view class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">加载更多</view>
+    </view>
+  </scroll-view>
+</block>

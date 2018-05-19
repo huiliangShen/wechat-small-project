@@ -1,5 +1,5 @@
 
-const baseUrl = 'http://localhost:8088';
+const baseUrl = 'http://192.168.31.48:8088';
 
 export const requetCommon = (url, data, methods = 'POST') => {
   return new Promise((resolve, reject) => {

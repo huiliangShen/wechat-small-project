@@ -1,13 +1,33 @@
 {
   "pages": [
+    "pages/coming/coming",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/movies/movies"
+    "pages/movies/movies",
+    "pages/logs/logs"
   ],
+  "tabBar": {
+    "selectedColor": "#2aac5e",
+    "list": [
+      {
+        "pagePath": "pages/coming/coming",
+        "text": "即将上映",
+        "iconPath":"./img/coming.png",
+        "selectedIconPath":"./img/coming-db-active.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "正在热播",
+        "iconPath": "./img/ing.png",
+        "selectedIconPath": "./img/ing-db-active.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  }
+    "navigationBarBackgroundColor": "#2aac5e",
+    "navigationBarTitleText": "豆芽儿",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "debug": true
 }
